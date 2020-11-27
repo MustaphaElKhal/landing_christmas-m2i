@@ -19,14 +19,41 @@
     padding-top: 50px;
 }
 
-/* 
-.balls {
+
+.ball {
     height: 241px;
     width: 233px;
     margin-left: 438px;
     margin-top: -51px;
 }
-*/
+
+.ballnofil {
+    height: 144px;
+    width: 110px;
+    margin-left: 873px;
+    margin-top: 7px;
+}
+
+.fil {
+    height: 261px;
+    width: 9px;
+    margin-left: 924px;
+    margin-top: -669px;
+}
+
+.logo1{
+    height: 41px;
+    width: 90px;
+    margin-left: 800px;
+    margin-top: -812px;
+}
+
+.logo2{
+    height: 44px;
+    width: 60px;
+    margin-left: 897px;
+    margin-top: -791px;
+}
 
 .ulList {
     font-family: 'Mountains of Christmas', cursive;
@@ -35,10 +62,11 @@
     letter-spacing: normal;
     font-size: 20px;
     padding: 30px 30px 30px 50px;
-    background-color:rgb(255, 255, 255, 0.6);
+    background-color: rgb(255, 255, 255, 0.6);
     width: max-content;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: -539px;
+    margin-bottom: -172px;
+    margin-left: 60px;
 }
 
 .list {
@@ -103,3 +131,137 @@
     flex: 0 0 99.5%;
   }
  }  
+
+
+@media screen and (max-width: 991px) {
+    .ball {
+        display: none
+    }
+    
+    .ballnofil {
+        display: none
+    }
+
+    .fil {
+        display: none
+    }
+
+    .logo2{
+        display: none
+    }
+
+    .ulList {
+        margin-top: 52px;
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .ball {
+        display: none
+    }
+    
+    .ballnofil {
+        display: none
+    }
+
+    .fil {
+        display: none
+    }
+
+    .logo1{
+        display: none
+    }
+
+    .logo2{
+        display: none
+    }
+
+    .ulList {
+        margin-top: 52px;
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .ball {
+        display: none
+    }
+    
+    .ballnofil {
+        display: none
+    }
+
+    .fil {
+        display: none
+    }
+
+    .logo1{
+        display: none
+    }
+
+    .logo2{
+        display: none
+    }
+
+    .ulList {
+        margin-top: 52px;
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ball {
+        display: none
+    }
+    
+    .ballnofil {
+        display: none
+    }
+
+    .fil {
+        display: none
+    }
+
+    .logo1{
+        display: none
+    }
+
+    .logo2{
+        display: none
+    }
+
+    .ulList {
+        margin-top: 52px;
+        margin-bottom: 12px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .ball {
+        display: none
+    }
+    
+    .ballnofil {
+        display: none
+    }
+
+    .fil {
+        display: none
+    }
+
+    .logo1{
+        display: none
+    }
+
+    .logo2{
+        display: none
+    }
+
+    .ulList {
+        margin-top: 52px;
+        margin-bottom: 12px;
+        margin-left: -18px;
+    }
+}

@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./Home.css";
 import boule from "./assets/boule.png";
+import boulenofil from "./assets/boule-no-fil.png";
+import fil from "./assets/fil.png";
+import logotech from "./assets/Logo2itechacademy.png";
+import logom2i from "./assets/Logom2i.png";
 import image1 from "./assets/1.png";
 import image2 from "./assets/2.png";
 import image3 from "./assets/3.png";
@@ -36,7 +40,11 @@ class Home extends Component {
       <div className="container mt-2 mb-5 rounded">
         <div className="topHP">
           <div className="merryChristmas">Joyeux Noel
-          {/*<img className="balls" src={boule}></img>*/}
+            <img className="ball" src={boule}></img>
+            <img className="ballnofil" src={boulenofil}></img>
+            <img className="fil" src={fil}></img>
+            <img className="logo1" src={logotech}></img>
+            <img className="logo2" src={logom2i}></img>
             <ul className="ulList rounded">
                 <li>Découvrez la question du jour</li>
                 <li>Formez-vous et amusez-vous</li>
