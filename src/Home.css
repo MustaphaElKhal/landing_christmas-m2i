@@ -19,6 +19,24 @@
     padding-top: 50px;
 }
 
+.box {
+    position: relative;
+}
+
+
+#snow {
+    position: absolute;
+    z-index: 1; 
+    top: -36px;
+}
+.snowFlakes {
+    display: inline-block;
+    font-family: 'Mountains of Christmas', cursive;
+    color: red;
+    position: absolute;
+    z-index: 1;
+    font-size: 30px;
+}
 /* 
 .balls {
     height: 241px;
@@ -58,7 +76,27 @@
     display: block;
     width: 100%;
     height: auto;
+    position: relative;
 }
+
+.opacity-0 {
+    opacity:0!important;
+  }
+  .opacity-1 {
+    opacity:0.2!important;
+  }
+  .opacity-2 {
+    opacity:0.4!important;
+  }
+  .opacity-3 {
+    opacity:0.6!important;
+  }
+  .opacity-4 {
+    opacity:.8!important;
+  }
+  .opacity-5 {
+    opacity:1!important;
+  }
 
 .center {
     height: auto;

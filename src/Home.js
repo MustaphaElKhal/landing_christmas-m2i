@@ -28,9 +28,70 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        images: [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22]
+        dayDate: this.getDate(), //1606480126
+        startDayDate: this.getStartDayDate(), //1606435200
+        endDayDate: this.getEndDayDate(), //1606521599
+        images: [
+            {image:image1,date:1577836800}, // 1/1/2020 à 0:00:00
+            {image:image2,date:1606435200}, // 27/11/2020 à 0:00:00
+            {image:image3,date:1606953600}, 
+            {image:image4,date:1607040000},
+            {image:image5,date:1607126400},
+            {image:image6,date:1607212800},
+            {image:image7,date:1607299200},
+            {image:image8,date:1607385600},
+            {image:image9,date:1607472000},
+            {image:image10,date:1607558400},
+            {image:image11,date:1607644800},
+            {image:image12,date:1607731200},
+            {image:image13,date:1607817600},
+            {image:image14,date:1607904000},
+            {image:image15,date:1607990400},
+            {image:image16,date:1608076800},
+            {image:image17,date:1608163200},
+            {image:image18,date:1608249600},
+            {image:image19,date:1608336000},
+            {image:image20,date:1608422400},
+            {image:image21,date:1608508800},
+            {image:image22,date:1608595200}
+        ]
     };
   }
+
+  getDate = () => {
+      return (Date.now() / 1000) | 0;
+  }
+
+  getStartDayDate = () => {
+    let nowDate = (Date.now() /1000);
+    let date = new Date(nowDate *1000);
+    let firstHour = date.setHours(0, 0, 0, 0)+3600000
+    return new Date(firstHour).getTime() /1000;
+  }
+
+  getEndDayDate = () => {
+    let nowDate = (Date.now() /1000);
+    let date = new Date(nowDate *1000);
+    let lastHour = date.setHours(23, 59, 59, 0)+3600000
+    return new Date(lastHour).getTime() /1000;
+  }
+
+  pastDate = (day) => {
+    if (this.state.startDayDate > day ) {
+        return true
+    } else {
+        return false
+    }
+  }
+
+  currentDate = (day) => {
+    if (day >= this.state.startDayDate && day <= this.state.endDayDate ) {
+        return true
+    } else {
+        return false
+    }
+  }
+
   render() {
     return (
       <div className="container mt-2 mb-5 rounded">
@@ -49,7 +110,7 @@ class Home extends Component {
         <div className="center pl-5 pr-5">
           <ul className="ulBoxDay">
           {this.state.images.map((image, index) => (
-            <BoxDay key={index} image={image} day={index+1} />
+            <BoxDay key={index} image={image} day={index+1} dayPast={this.pastDate(image.date)} currentDay={this.currentDate(image.date)}/>
            ))}
           </ul>
         </div>
