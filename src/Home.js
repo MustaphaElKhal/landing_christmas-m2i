@@ -36,6 +36,7 @@ class Home extends Component {
       <div className="container mt-2 mb-5 rounded">
         <div className="topHP">
           <div className="merryChristmas">Joyeux Noel
+          {/*<img className="balls" src={boule}></img>*/}
             <ul className="ulList rounded">
                 <li>Découvrez la question du jour</li>
                 <li>Formez-vous et amusez-vous</li>
