@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./Home.css";
 import boule from "./assets/boule.png";
+import boulenofil from "./assets/boule-no-fil.png";
+import fil from "./assets/fil.png";
+import logotech from "./assets/Logo2itechacademy.png";
+import logom2i from "./assets/Logom2i.png";
 import image1 from "./assets/1.png";
 import image2 from "./assets/2.png";
 import image3 from "./assets/3.png";
@@ -28,12 +32,12 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        dayDate: this.getDate(), //1606480126
-        startDayDate: this.getStartDayDate(), //1606435200
-        endDayDate: this.getEndDayDate(), //1606521599
+        dayDate: this.getDate(),
+        startDayDate: this.getStartDayDate(),
+        endDayDate: this.getEndDayDate(),
         images: [
-            {image:image1,date:1577836800}, // 1/1/2020 à 0:00:00
-            {image:image2,date:1606435200}, // 27/11/2020 à 0:00:00
+            {image:image1,date:1606780800},
+            {image:image2,date:1606867200},
             {image:image3,date:1606953600}, 
             {image:image4,date:1607040000},
             {image:image5,date:1607126400},
@@ -97,12 +101,16 @@ class Home extends Component {
       <div className="container mt-2 mb-5 rounded">
         <div className="topHP">
           <div className="merryChristmas">Joyeux Noel
-          {/*<img className="balls" src={boule}></img>*/}
+          <img className="ball" src={boule}></img>
+            <img className="ballnofil" src={boulenofil}></img>
+            <img className="fil" src={fil}></img>
+            <img className="logo1" src={logotech}></img>
+            <img className="logo2" src={logom2i}></img>
             <ul className="ulList rounded">
-                <li>Découvrez la question du jour</li>
-                <li>Formez-vous et amusez-vous</li>
-                <li>Des cadeaux tous les jours</li>
-                <li>Vite vous êtes peut-être le gagnant du jour</li>
+                <li><i className="fas fa-bell"></i> Découvrez la question du jour</li>
+                <li><i className="fas fa-snowflake"></i> Formez-vous et amusez-vous</li>
+                <li><i className="fas fa-gift"></i> Des cadeaux tous les jours</li>
+                <li><i class="fas fa-trophy"></i> Vite vous êtes peut-être le gagnant du jour</li>
             </ul>
           </div>
 
