@@ -36,9 +36,9 @@ class Home extends Component {
         startDayDate: this.getStartDayDate(),
         endDayDate: this.getEndDayDate(),
         images: [
-            {image:image1,date:1165017600},
-            {image:image2,date:1606489200},
-            {image:image3,date:1606953600}, 
+            {image:image1,date:1606564800},
+            {image:image2,date:1606867200},
+            {image:image3,date:1606953600},
             {image:image4,date:1607040000},
             {image:image5,date:1607126400},
             {image:image6,date:1607212800},
