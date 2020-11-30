@@ -36,7 +36,7 @@ class Home extends Component {
         startDayDate: this.getStartDayDate(),
         endDayDate: this.getEndDayDate(),
         images: [
-            {image:image1,date:1606564800},
+            {image:image1,date:1606824000},
             {image:image2,date:1606867200},
             {image:image3,date:1606953600},
             {image:image4,date:1607040000},
@@ -61,7 +61,7 @@ class Home extends Component {
         ]
     };
   }
-
+  
   getDate = () => {
       return (Date.now() / 1000) | 0;
   }
@@ -107,15 +107,16 @@ class Home extends Component {
             <img className="logo1" src={logotech}></img>
             <img className="logo2" src={logom2i}></img>
             <ul className="ulList rounded">
-                <li><i className="fas fa-bell"></i> Découvrez la question du jour</li>
-                <li><i className="fas fa-snowflake"></i> Formez-vous et amusez-vous</li>
-                <li><i className="fas fa-gift"></i> Des cadeaux tous les jours</li>
-                <li><i className="fas fa-trophy"></i> Vite vous êtes peut-être le gagnant du jour</li>
+                <li><i className="fas fa-bell"></i> <p className="headerLi">Découvre la question du jour</p></li>
+                <li><i className="fas fa-snowflake"></i> <p className="headerLi">Forme-toi et amuse-toi</p></li>
+                <li><i className="fas fa-gift"></i> <p className="headerLi">Tente et gagne une surprise derrière chaque case!</p></li>
+                <li><i className="fas fa-trophy"></i> <p className="headerLi">AUJOURD'HUI, tu seras peut-être l'heureux élu...!?</p></li>
+                <li className="youPlay"><p className="headerLi">A toi de jouer</p></li>
             </ul>
           </div>
 
         </div>
-        <div className="center pl-5 pr-5">
+        <div className="center pl-5 pr-5 pt-5">
           <ul className="ulBoxDay">
           {this.state.images.map((image, index) => (
             <BoxDay key={index} image={image} day={index+1} dayPast={this.pastDate(image.date)} currentDay={this.currentDate(image.date)}/>

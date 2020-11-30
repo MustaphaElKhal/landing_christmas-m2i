@@ -53,7 +53,7 @@ class BoxDay extends Component {
         {this.props.dayPast
         ?
         (
-          <div className="box">
+          <div className="box" id={this.props.day}>
             <img
               className="imgDay rounded-circle opacity-1 border border-danger border-3" alt=""
               src={this.props.image.image}
@@ -69,7 +69,7 @@ class BoxDay extends Component {
               (this.props.day === 15 && this.props.currentDay !==true) || this.props.day === 22) && this.props.currentDay !==true  
               ? 
               (
-              <div className="box">
+              <div className="box" id={this.props.day}>
                 <img
                   className="imgDay rounded-circle opacity-3 border border-success border-3" alt=""
                   src={this.props.image.image}
@@ -83,7 +83,7 @@ class BoxDay extends Component {
               {(this.props.day === 3 || this.props.day === 11 || this.props.day === 15 || this.props.day === 22) && this.props.currentDay
               ?
               (
-                <div className="box">
+                <div className="box" id={this.props.day}>
                   <i className="fas fa-star-of-life size-4 pb-5" id="snow">
                     <p className="snowFlakes">Nouveau</p>
                   </i>
@@ -102,7 +102,7 @@ class BoxDay extends Component {
                 {this.props.currentDay
                   ?
                   (
-                  <div className="box">
+                  <div className="box" id={this.props.day}>
                     <i className="fas fa-star-of-life size-4 pb-5" id="snow">
                       <p className="snowFlakes">Nouveau</p>
                     </i>
@@ -112,7 +112,7 @@ class BoxDay extends Component {
                   )
                   :
                   (
-                  <div className="box">
+                  <div className="box" id={this.props.day}>
                     <img className="imgDay rounded-circle opacity-3" alt="" src={this.props.image.image}></img>
                     <div className="bottom-right opacity-3">{this.props.day}</div>
                   </div>
